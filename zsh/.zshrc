@@ -64,10 +64,7 @@ zstyle ':completion:*:*:z:*' fzf-preview 'ls -1 -a --color=always $realpath'
 # OH-MY-ZSH SNIPPETS
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::pacman
-zinit snippet OMZP::aws
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::kubectx
+zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 zinit cdreplay -q
 
