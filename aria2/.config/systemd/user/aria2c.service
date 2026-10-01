@@ -1,0 +1,12 @@
+[Unit]
+Description=Aria2 Background Download Service
+After=network.target
+
+[Service]
+ExecStartPre=/usr/bin/bash -c "mkdir -p %h/.config/aria2 && touch %h/.config/aria2/aria2.session"
+ExecStart=/usr/bin/aria2c --conf-path=%h/.config/aria2/aria2.conf
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
