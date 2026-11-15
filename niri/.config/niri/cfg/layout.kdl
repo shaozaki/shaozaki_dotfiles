@@ -1,0 +1,26 @@
+layout {
+    // Jarak antar jendela
+    gaps 5
+   // always-center-single-column
+//    center-focused-column "false"
+
+    // Definisikan ukuran preset yang akan digilir saat menekan Mod+R
+    preset-column-widths {
+        proportion 0.33333  // Sepertiga layar
+        proportion 0.5      // Setengah layar
+	proportion 0.7
+        fixed 1920          // Ukuran pixel tetap (opsional)
+    }
+
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+	proportion 0.8
+    }
+
+    default-column-width { proportion 0.5; }
+    focus-ring {
+        width 2.5
+    }
+    background-color "transparent"
+}

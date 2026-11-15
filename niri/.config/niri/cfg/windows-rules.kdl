@@ -1,0 +1,29 @@
+window-rule {
+    geometry-corner-radius 15
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="wl-mirror"
+    open-fullscreen true
+}
+
+window-rule {
+    match app-id="dev.noctalia.Noctalia"
+    open-floating true
+}
+
+layer-rule {
+    match namespace="^noctalia-wallpaper$"
+    place-within-backdrop true
+}
+
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+overview {
+  workspace-shadow {
+    off
+  }
+}

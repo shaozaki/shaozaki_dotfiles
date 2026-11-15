@@ -1,0 +1,176 @@
+binds {
+    // Core Noctalia binds
+    Mod+Space repeat=false { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S repeat=false{ spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma repeat=false{ spawn-sh "noctalia msg settings-toggle"; }
+    Mod+X repeat=false{ spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+W repeat=false{ spawn-sh "noctalia msg panel-toggle calendar"; }
+
+
+    // Quick Access (Noctalia Launcher)
+    Mod+Ctrl+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Period { spawn-sh "noctalia msg panel-toggle launcher /emo"; }
+
+    // Security & Privacy (Noctalia IPC)
+    Mod+Shift+Escape { spawn-sh "noctalia msg session lock"; }
+    Mod+Shift+I { spawn-sh "noctalia msg caffeine-toggle"; }
+    Mod+Shift+A { spawn-sh "noctalia msg wifi-toggle"; }
+
+    // Notifications (Noctalia IPC)
+    Mod+N { spawn-sh "noctalia msg panel-toggle control-center notifications"; }
+    Mod+Shift+N { spawn-sh "noctalia msg notification-clear-active"; }
+    Mod+Ctrl+N { spawn-sh "noctalia msg notification-dnd-toggle"; }
+    Mod+Alt+N { spawn-sh "noctalia msg notification-clear-history"; }
+
+    // Wallpaper Management (Noctalia IPC)
+    Mod+Alt+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+Alt+R { spawn-sh "noctalia msg wallpaper-random"; }
+    Mod+Alt+A { spawn-sh "noctalia msg wallpaper-next"; }
+
+    // System & Power
+    Mod+Shift+E { quit; }
+    Mod+Shift+P { power-off-monitors; }
+
+    // Audio & Brightness (Dedicated Keys)
+    XF86AudioRaiseVolume allow-when-locked=true{ spawn "noctalia" "msg" "volume-up"; }
+    XF86AudioLowerVolume allow-when-locked=true{ spawn "noctalia" "msg" "volume-down"; }
+    XF86AudioMute allow-when-locked=true{ spawn "noctalia" "msg" "volume-mute"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "noctalia" "msg" "brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down"; }
+
+    // Audio & Brightness (60% Keyboard Alternatives - Vim Style)
+    Ctrl+Alt+K { spawn "noctalia" "msg" "volume-up"; }
+    Ctrl+Alt+J { spawn "noctalia" "msg" "volume-down"; }
+    Ctrl+Alt+M { spawn "noctalia" "msg" "volume-mute"; }
+    Ctrl+Alt+L allow-when-locked=true { spawn "noctalia" "msg" "brightness-up"; }
+    Ctrl+Alt+H allow-when-locked=true { spawn "noctalia" "msg" "brightness-down"; }
+
+    // Media Controls (Noctalia IPC)
+    Ctrl+Alt+Backslash { spawn "noctalia" "msg" "media" "toggle"; }
+    Ctrl+Alt+BracketLeft { spawn "noctalia" "msg" "media" "previous"; }
+    Ctrl+Alt+BracketRight { spawn "noctalia" "msg" "media" "next"; }
+
+    // Screenshots
+    Mod+Shift+S { screenshot; }
+    Alt+Shift+P { screenshot-screen; }
+    Alt+Shift+W { screenshot-window; }
+
+    // Navigation (Arrow Keys & HJKL Equivalents)
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+H { focus-column-left; }
+    Mod+L { focus-column-right; }
+
+    // Dynamic Focus Across Workspaces
+    Mod+Up { focus-window-or-workspace-up; }
+    Mod+Down { focus-window-or-workspace-down; }
+    Mod+K { focus-window-up; }
+    Mod+J { focus-window-down; }
+    Mod+U{focus-workspace-down;}
+    Mod+I {focus-workspace-up;}
+
+    Mod+Q { close-window; }
+
+    //Application
+    Super+T { spawn "kitty"; }
+    Super+B { spawn "zen-browser"; }
+    Mod+E {spawn "dolphin";}
+
+    // Floating Windows (Updated)
+    Mod+V { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    // Vertical Workspace Navigation
+
+    Mod+Page_Down { focus-workspace-down; }
+    Mod+Page_Up { focus-workspace-up; }
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown cooldown-ms=150 {focus-column-right; }
+    Mod+Shift+WheelScrollUp cooldown-ms=150 { focus-column-left; }
+
+    // Move Entire Workspace
+    Mod+Alt+Page_Down { move-workspace-down; }
+    Mod+Alt+Page_Up { move-workspace-up; }
+
+    // Direct Workspace Navigation (1-9)
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+
+    // Move Columns
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+L { move-column-right; }
+
+
+    // Move Windows to Workspaces
+    Mod+Shift+Page_Down { move-window-to-workspace-down; }
+    Mod+Shift+Page_Up { move-window-to-workspace-up; }
+    Mod+Ctrl+I { move-window-to-workspace-up; }
+    Mod+Ctrl+U { move-window-to-workspace-down; }
+
+    // Dynamic Move Across Workspaces
+    Mod+Shift+J { move-window-down-or-to-workspace-down; }
+    Mod+Shift+K { move-window-up-or-to-workspace-up; }
+
+    // Move Windows to Specific Workspaces
+    Mod+Ctrl+1 { move-window-to-workspace 1; }
+    Mod+Ctrl+2 { move-window-to-workspace 2; }
+    Mod+Ctrl+3 { move-window-to-workspace 3; }
+
+    // Tabbed & Advanced Column Manipulation
+    Mod+C { toggle-column-tabbed-display; }
+    Mod+Shift+C { center-column; }
+    Mod+Alt+H { consume-or-expel-window-left; }
+    Mod+Alt+L { consume-or-expel-window-right; }
+    Mod+Alt+J { consume-window-into-column; }
+    Mod+Alt+K { expel-window-from-column; }
+
+    // Multi-Monitor Management
+    Mod+P repeat=false { spawn-sh "pkill -x wl-mirror || wl-mirror --fullscreen-output $(niri msg --json outputs | jq -r 'keys[] | select(. != \"eDP-1\")' | head -n1) eDP-1"; }
+    Mod+Shift+Left { focus-monitor-left; }
+    Mod+Shift+Right { focus-monitor-right; }
+    Mod+Shift+Up { focus-monitor-up; }
+    Mod+Shift+Down { focus-monitor-down; }
+    Mod+Shift+Ctrl+Left { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+    Mod+Shift+Ctrl+Up { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Down { move-column-to-monitor-down; }
+
+    // Multi-Monitor Management (HJKL Equivalents)
+    Mod+Ctrl+H { focus-monitor-left; }
+    Mod+Ctrl+L { focus-monitor-right; }
+    Mod+Ctrl+K { focus-monitor-up; }
+    Mod+Ctrl+J { focus-monitor-down; }
+
+    // Column Width Controls
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+
+    // Window Height Controls
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    // Preset Dimensions
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+
+    // Direct Sizing
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    // Proportional Constraints
+    Mod+BracketLeft { set-column-width "33.33%"; }
+    Mod+BracketRight { set-column-width "50%"; }
+
+    Mod+D { toggle-overview; }
+
+    // Help Overlay
+    Mod+Shift+Slash { show-hotkey-overlay; }
+}

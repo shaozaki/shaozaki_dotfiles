@@ -1,0 +1,31 @@
+input {
+touchpad {
+	tap
+	dwt
+	natural-scroll
+}
+}
+
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
+    hide-when-typing
+}
+
+output "eDP-1" {
+    scale 1
+    variable-refresh-rate on-demand=true
+}
+output "HDMI-A-1" {
+    scale 1
+    variable-refresh-rate on-demand=true
+}
+output "HDMI-A-2" {
+    scale 1
+    variable-refresh-rate on-demand=true
+}
+gestures {
+    hot-corners { off; }
+}
+
+screenshot-path "/home/shaozaki/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

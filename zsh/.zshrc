@@ -66,7 +66,23 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
+zinit snippet OMZ::plugins/common-aliases/common-aliases.plugin.zsh
+zinit light jeffreytse/zsh-vi-mode
+zinit light hlissner/zsh-autopair
 zinit cdreplay -q
 
 # PROMPT THEME
 eval "$(oh-my-posh init zsh --config ~/.config/omp/theme.json)"
+export SPICETIFY_INSTALL="$HOME/.spicetify"
+export PATH="$SPICETIFY_INSTALL:$PATH"
+
+
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/shaozaki/.dart-cli-completion/zsh-config.zsh ]] && . /home/shaozaki/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/shaozaki/.local/bin:$PATH"
