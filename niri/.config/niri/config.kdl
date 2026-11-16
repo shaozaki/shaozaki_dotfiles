@@ -6,4 +6,4 @@ include "cfg/layout.kdl"
 
 prefer-no-csd
 
-include "cfg/noctalia.kdl"
+include "noctalia.kdl"

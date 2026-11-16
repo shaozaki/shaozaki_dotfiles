@@ -10,6 +10,7 @@ window-rule {
 
 window-rule {
     match app-id="dev.noctalia.Noctalia"
+    match app-id="org.freedesktop.impl.portal.desktop.kde"
     open-floating true
 }
 
